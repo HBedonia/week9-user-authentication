@@ -80,7 +80,7 @@ class _SignUpState extends State<SignUpPage> {
         if (_formKey.currentState!.validate()) {
           _formKey.currentState!.save();
           await context
-              .read<UserAuthProvider>()
+              .read<UserAuthProvider>() //separate file for authentication 
               .authService
               .signUp(email!, password!);
 
